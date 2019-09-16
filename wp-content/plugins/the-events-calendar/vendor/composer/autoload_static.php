@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit1e14d36a81f25b127dfe9ca1d1950e7c
+class ComposerStaticInit01d175bc66440a1ca0e02d5cadfc6dd6
 {
     public static $prefixLengthsPsr4 = array (
         'T' => 
@@ -81,6 +81,7 @@ class ComposerStaticInit1e14d36a81f25b127dfe9ca1d1950e7c
         'Tribe\\Events\\Views\\V2\\Query\\Event_Query_Controller' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/Query/Event_Query_Controller.php',
         'Tribe\\Events\\Views\\V2\\Query\\MainQueryControlTest' => __DIR__ . '/../..' . '/tests/views_integration/Tribe/Events/Views/V2/Query/MainQueryControlTest.php',
         'Tribe\\Events\\Views\\V2\\Rest_Endpoint' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/Rest_Endpoint.php',
+        'Tribe\\Events\\Views\\V2\\Rest_EndpointTest' => __DIR__ . '/../..' . '/tests/views_integration/Tribe/Events/Views/V2/Rest_EndpointTest.php',
         'Tribe\\Events\\Views\\V2\\Service_Provider' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/Service_Provider.php',
         'Tribe\\Events\\Views\\V2\\Template' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/Template.php',
         'Tribe\\Events\\Views\\V2\\TemplateBootstrapTest' => __DIR__ . '/../..' . '/tests/views_integration/Tribe/Events/Views/V2/TemplateBootstrapTest.php',
@@ -97,11 +98,13 @@ class ComposerStaticInit1e14d36a81f25b127dfe9ca1d1950e7c
         'Tribe\\Events\\Views\\V2\\UrlTest' => __DIR__ . '/../..' . '/tests/views_integration/Tribe/Events/Views/V2/UrlTest.php',
         'Tribe\\Events\\Views\\V2\\Utils\\Separators' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/Utils/Separators.php',
         'Tribe\\Events\\Views\\V2\\Utils\\SeparatorsTest' => __DIR__ . '/../..' . '/tests/views_integration/Tribe/Events/Views/V2/Utils/SeparatorsTest.php',
+        'Tribe\\Events\\Views\\V2\\Utils\\Stack' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/Utils/Stack.php',
         'Tribe\\Events\\Views\\V2\\Utils\\View' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/Utils/View.php',
         'Tribe\\Events\\Views\\V2\\V1_Compat' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/V1_Compat.php',
         'Tribe\\Events\\Views\\V2\\View' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/View.php',
         'Tribe\\Events\\Views\\V2\\ViewTest' => __DIR__ . '/../..' . '/tests/views_integration/Tribe/Events/Views/V2/ViewTest.php',
         'Tribe\\Events\\Views\\V2\\View_Interface' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/View_Interface.php',
+        'Tribe\\Events\\Views\\V2\\Views\\By_Day_View' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/Views/By_Day_View.php',
         'Tribe\\Events\\Views\\V2\\Views\\Day_View' => __DIR__ . '/../..' . '/src/Tribe/Views/V2/Views/Day_View.php',
         'Tribe\\Events\\Views\\V2\\Views\\Day_ViewTest' => __DIR__ . '/../..' . '/tests/views_integration/Tribe/Events/Views/V2/Views/Day_ViewTest.php',
         'Tribe\\Events\\Views\\V2\\Views\\HTML\\DayTest' => __DIR__ . '/../..' . '/tests/views_integration/Tribe/Events/Views/V2/HTML/DayTest.php',
@@ -135,9 +138,9 @@ class ComposerStaticInit1e14d36a81f25b127dfe9ca1d1950e7c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit1e14d36a81f25b127dfe9ca1d1950e7c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit1e14d36a81f25b127dfe9ca1d1950e7c::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit1e14d36a81f25b127dfe9ca1d1950e7c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit01d175bc66440a1ca0e02d5cadfc6dd6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit01d175bc66440a1ca0e02d5cadfc6dd6::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit01d175bc66440a1ca0e02d5cadfc6dd6::$classMap;
 
         }, null, ClassLoader::class);
     }

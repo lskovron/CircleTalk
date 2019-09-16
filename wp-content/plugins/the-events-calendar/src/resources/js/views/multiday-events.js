@@ -194,7 +194,7 @@ tribe.events.views.multidayEvents = {};
 	 *
 	 * @since 4.9.5
 	 *
-	 * @param  {Event}       event    event object for 'afterSetup.tribeEvents' event
+	 * @param  {Event}       event    event object for 'beforeAjaxSuccess.tribeEvents' event
 	 * @param  {jqXHR}       jqXHR    Request object
 	 * @param  {PlainObject} settings Settings that this request was made with
 	 *
@@ -209,9 +209,9 @@ tribe.events.views.multidayEvents = {};
 	/**
 	 * Binds events for container.
 	 *
-	 * @since 4.9.5
+	 * @since 4.9.8
 	 *
-	 * @param {Event}   event      JS event triggered.
+	 * @param {Event}   event      event object for 'afterSetup.tribeEvents' event
 	 * @param {integer} index      jQuery.each index param from 'afterSetup.tribeEvents' event.
 	 * @param {jQuery}  $container jQuery object of view container.
 	 * @param {object}  data       data object passed from 'afterSetup.tribeEvents' event.
@@ -221,11 +221,11 @@ tribe.events.views.multidayEvents = {};
 	obj.bindEvents = function( event, index, $container, data ) {
 		var viewSlug = data.slug;
 
-		if ( [ 'month', 'week' ].indexOf( viewSlug ) >= 0 ) {
-			obj.initSelectors( viewSlug );
-			obj.bindMultidayEvents( $container );
-			$container.on( 'beforeAjaxSuccess.tribeEvents', { container: $container }, obj.unbindEvents );
-		}
+		if ( -1 === [ 'month', 'week' ].indexOf( viewSlug ) ) return;
+
+		obj.initSelectors( viewSlug );
+		obj.bindMultidayEvents( $container );
+		$container.on( 'beforeAjaxSuccess.tribeEvents', { container: $container }, obj.unbindEvents );
 	};
 
 	/**
